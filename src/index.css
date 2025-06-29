@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-track-slate-800::-webkit-scrollbar-track {
+    background-color: rgb(30 41 59);
+  }
+  
+  .scrollbar-track-slate-700::-webkit-scrollbar-track {
+    background-color: rgb(51 65 85);
+  }
+  
+  .scrollbar-thumb-slate-600::-webkit-scrollbar-thumb {
+    background-color: rgb(71 85 105);
+    border-radius: 0.375rem;
+  }
+  
+  .scrollbar-thumb-slate-500::-webkit-scrollbar-thumb {
+    background-color: rgb(100 116 139);
+    border-radius: 0.375rem;
+  }
+  
+  .hover\:scrollbar-thumb-slate-500:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(100 116 139);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(71 85 105);
+    border-radius: 0.375rem;
+    border: none;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(100 116 139);
+  }
+  
+  /* Hide scrollbar completely */
+  .scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Chat interface specific height constraints */
+  .chat-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* Ensure body and html allow scrolling by default */
+html, body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
